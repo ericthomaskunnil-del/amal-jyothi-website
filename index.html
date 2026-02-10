@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Canberra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="background-canvas"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav class="glass-nav">
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i> CANBERRA
+        </div>
+        <ul class="nav-links">
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#admission">Admission</a></li>
+            <li><a href="#faculties">Faculties</a></li>
+            <li><a href="#scholarships">Scholarships</a></li>
+            <li><a href="#management">Management</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="#" class="btn-secondary">Portal</a>
+            <a href="#" class="btn-primary">Apply Now</a>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="pill-tag">Future Is Here</span>
+            <h1 class="hero-title">Shape Your <span class="gradient-text">World</span><br>At Canberra.</h1>
+            <p class="hero-subtitle">Experience a campus designed for the bold, the creative, and the curious. Join a
+                global community of innovators.</p>
+            <div class="hero-btns">
+                <a href="#courses" class="btn-primary-lg">Find a Course <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#tour" class="btn-outline-lg"><i class="fa-solid fa-play"></i> Virtual Tour</a>
+            </div>
+
+            <div class="stats-glass">
+                <div class="stat-item">
+                    <h3>#1</h3>
+                    <p>In Graduate Employment</p>
+                </div>
+                <div class="stat-item">
+                    <h3>90+</h3>
+                    <p>Countries Represented</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5★</h3>
+                    <p>Teaching Quality</p>
+                </div>
+            </div>
+        </div>
+        <div class="social-sidebar">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="scroll-down">
+            <span>Scroll</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <section class="stories-scroller">
+        <div class="section-header-mini">
+            <h2>Campus <span class="highlight">Vibe</span></h2>
+            <a href="#">View All Stories</a>
+        </div>
+        <div class="stories-container">
+            <!-- Simulated Stories -->
+            <div class="story-circle">
+                <div class="img-ring">
+                    <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&w=200&q=80"
+                        alt="Student">
+                </div>
+                <span>Life at UC</span>
+            </div>
+            <div class="story-circle">
+                <div class="img-ring">
+                    <img src="https://images.unsplash.com/photo-1519456263626-8f8c9396a351?auto=format&fit=crop&w=200&q=80"
+                        alt="Events">
+                </div>
+                <span>Events</span>
+            </div>
+            <div class="story-circle">
+                <div class="img-ring ring-live">
+                    <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=200&q=80"
+                        alt="Sports">
+                </div>
+                <span>Sports</span>
+            </div>
+            <div class="story-circle">
+                <div class="img-ring">
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=200&q=80"
+                        alt="Alumni">
+                </div>
+                <span>Alumni</span>
+            </div>
+            <div class="story-circle">
+                <div class="img-ring">
+                    <img src="https://images.unsplash.com/photo-1498075702571-ecb01633758a?auto=format&fit=crop&w=200&q=80"
+                        alt="Tech">
+                </div>
+                <span>Innovation</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses-section" id="courses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore <span class="text-pink">Degrees</span></h2>
+                <p>Find the course that ignites your passion.</p>
+            </div>
+
+            <div class="courses-grid">
+                <div class="glass-card course-card">
+                    <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>IT & Data Science</h3>
+                    <p>Master AI, Cyber Security, and Software Engineering.</p>
+                    <a href="#" class="card-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="glass-card course-card">
+                    <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Health</h3>
+                    <p>Nursing, Psychology, and Public Health.</p>
+                    <a href="#" class="card-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="glass-card course-card">
+                    <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h3>Arts & Design</h3>
+                    <p>Architecture, Graphic Design, and Media.</p>
+                    <a href="#" class="card-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="glass-card course-card">
+                    <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3>Law & Business</h3>
+                    <p>Commerce, Management, and Legal Studies.</p>
+                    <a href="#" class="card-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="glass-card course-card">
+                    <div class="card-icon"><i class="fa-solid fa-flask"></i></div>
+                    <h3>Science</h3>
+                    <p>Environmental Science, Biomedical, and Physics.</p>
+                    <a href="#" class="card-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="glass-card course-card">
+                    <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3>Education</h3>
+                    <p>Early Childhood, Primary, and Secondary Teaching.</p>
+                    <a href="#" class="card-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="admission-section" id="admission">
+        <div class="container split-layout">
+            <div class="admission-visual">
+                <div class="floating-img img-1">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80"
+                        alt="Students">
+                </div>
+                <div class="floating-img img-2">
+                    <div class="glass-badge">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Apply by July 30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="admission-content">
+                <h2><span class="text-teal">Admissions</span> Open</h2>
+                <p>Join a university that champions your potential. Our simple application process gets you started on
+                    your journey faster.</p>
+                <form class="glass-form">
+                    <div class="input-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-group">
+                        <select>
+                            <option>Select Level</option>
+                            <option>Undergraduate</option>
+                            <option>Postgraduate</option>
+                            <option>Research</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary-block">Start Application</button>
+                    <p class="form-note">Already applied? <a href="#">Check Status</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="faculties-section" id="faculties">
+        <div class="bg-blur-blob"></div>
+        <div class="container">
+            <div class="section-title center">
+                <h2>Our <span class="highlight">Faculties</span></h2>
+            </div>
+            <div class="faculties-slider">
+                <div class="faculty-card active">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80"
+                        alt="SciTech">
+                    <div class="f-content">
+                        <h3>Science & Tech</h3>
+                        <a href="#">Meet the Dean</a>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <img src="https://images.unsplash.com/photo-1558021284-833085ea7881?auto=format&fit=crop&w=600&q=80"
+                        alt="Business">
+                    <div class="f-content">
+                        <h3>Business & Gov</h3>
+                        <a href="#">Meet the Dean</a>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80"
+                        alt="Health">
+                    <div class="f-content">
+                        <h3>Health</h3>
+                        <a href="#">Meet the Dean</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="scholarships-section" id="scholarships">
+        <div class="container">
+            <div class="scholarship-banner glass-panel">
+                <div class="s-text">
+                    <h2>Scholarships & Grants</h2>
+                    <p>We believe talent shouldn't be limited by finances. Explore over $10M in scholarships.</p>
+                    <ul class="check-list">
+                        <li><i class="fa-solid fa-check"></i> Merit-based Awards</li>
+                        <li><i class="fa-solid fa-check"></i> Sports Excellence</li>
+                        <li><i class="fa-solid fa-check"></i> International Support</li>
+                    </ul>
+                    <a href="#" class="btn-white">Find Scholarships</a>
+                </div>
+                <div class="s-visual">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="management-section" id="management">
+        <div class="container">
+            <div class="section-title">
+                <h2>University <span class="text-pink">Management</span></h2>
+            </div>
+            <div class="management-grid">
+                <div class="profile-card glass-card">
+                    <div class="p-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
+                            alt="VC">
+                    </div>
+                    <h3>Prof. Paddy Nixon</h3>
+                    <p class="role">Vice-Chancellor</p>
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="profile-card glass-card">
+                    <div class="p-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+                            alt="DVC">
+                    </div>
+                    <h3>Dr. Sarah Jenkins</h3>
+                    <p class="role">Deputy Vice-Chancellor</p>
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="profile-card glass-card">
+                    <div class="p-img">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80"
+                            alt="Registrar">
+                    </div>
+                    <h3>Michael Ross</h3>
+                    <p class="role">Registrar</p>
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-glass">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>CANBERRA</h2>
+                <p>University of Canberra<br>Bruce ACT 2617<br>Australia</p>
+                <p class="phone">+61 2 6201 5111</p>
+            </div>
+            <div class="footer-links">
+                <h4>Study</h4>
+                <ul>
+                    <li><a href="#">Find a Course</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">Global Learning</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Campus</h4>
+                <ul>
+                    <li><a href="#">Maps</a></li>
+                    <li><a href="#">Accommodation</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Library</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Staff Directory</a></li>
+                    <li><a href="#">Alumni</a></li>
+                    <li><a href="#">Jobs at UC</a></li>
+                    <li><a href="#">Media Centre</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 University of Canberra. CRICOS 00212K.</p>
+            <div class="legal">
+                <a href="#">Privacy</a>
+                <a href="#">Disclaimer</a>
+                <a href="#">Copyright</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="color-bends.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const backgroundEffect = new ColorBends('background-canvas', {
+                colors: ["#ff5c7a", "#8a5cff", "#00ffd1"],
+                rotation: 0,
+                speed: 0.2,
+                scale: 1,
+                frequency: 1,
+                warpStrength: 1,
+                mouseInfluence: 1,
+                parallax: 0.5,
+                noise: 0.1,
+                transparent: true,
+                autoRotate: 0
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

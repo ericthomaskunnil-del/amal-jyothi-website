@@ -22,7 +22,7 @@ const navLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', () => {
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    if(navLinks.style.display === 'flex') {
+    if (navLinks.style.display === 'flex') {
         navLinks.style.flexDirection = 'column';
         navLinks.style.position = 'absolute';
         navLinks.style.top = '80px';
@@ -35,7 +35,7 @@ menuToggle.addEventListener('click', () => {
 });
 
 // Scroll Reveal Animation
-const revealElements = document.querySelectorAll('.glass-card, .story-circle, .section-title, .admission-content');
+const revealElements = document.querySelectorAll('.glass-card, .story-circle, .section-title, .admission-content, .about-content, .contact-info-card, .contact-map');
 
 const revealOnScroll = () => {
     const windowHeight = window.innerHeight;

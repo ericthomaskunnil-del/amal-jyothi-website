@@ -35,7 +35,7 @@ menuToggle.addEventListener('click', () => {
 });
 
 // Scroll Reveal Animation
-const revealElements = document.querySelectorAll('.glass-card, .story-circle, .section-title, .admission-content, .about-content, .contact-info-card, .contact-map');
+const revealElements = document.querySelectorAll('.glass-card, .story-circle, .section-title, .admission-content, .about-content, .contact-info-card, .contact-form-card');
 
 const revealOnScroll = () => {
     const windowHeight = window.innerHeight;
@@ -71,3 +71,15 @@ window.addEventListener('scroll', () => {
         nav.style.background = 'rgba(10, 25, 47, 0.7)';
     }
 });
+
+// Contact RSVP Form Submission
+const contactForm = document.getElementById('contact-rsvp-form');
+const formConfirmation = document.getElementById('form-confirmation');
+
+if (contactForm && formConfirmation) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        contactForm.style.display = 'none';
+        formConfirmation.style.display = 'block';
+    });
+}

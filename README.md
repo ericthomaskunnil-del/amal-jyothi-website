@@ -1,4 +1,5 @@
 # AJCE Website - Course Details Page
+https://ericthomaskunnil-del.github.io/amal-jyothi-website/
 
 ## What's New? 🎉
 

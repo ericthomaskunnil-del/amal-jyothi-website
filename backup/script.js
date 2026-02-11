@@ -83,3 +83,30 @@ if (contactForm && formConfirmation) {
         formConfirmation.style.display = 'block';
     });
 }
+
+// Magnetic Buttons Effect
+const magneticButtons = document.querySelectorAll('.btn-magnetic');
+
+magneticButtons.forEach((btn) => {
+    btn.addEventListener('mousemove', (e) => {
+        const position = btn.getBoundingClientRect();
+        const x = e.clientX - position.left - position.width / 2;
+        const y = e.clientY - position.top - position.height / 2;
+
+        btn.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
+
+        const btnText = btn.querySelector('.btn-text');
+        if (btnText) {
+            btnText.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+        }
+    });
+
+    btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0px, 0px)';
+
+        const btnText = btn.querySelector('.btn-text');
+        if (btnText) {
+            btnText.style.transform = 'translate(0px, 0px)';
+        }
+    });
+});

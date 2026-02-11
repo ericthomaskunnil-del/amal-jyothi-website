@@ -744,8 +744,25 @@
         </div>
         <div class="footer-bottom">
             <p>© 2025 Amal Jyothi College of Engineering. All rights reserved.</p>
+            <p class="credits">Created by Eric Thomas ❤️ and <span class="team-toggle"
+                    onclick="document.getElementById('team-popup').classList.toggle('show')">Team</span>.</p>
         </div>
     </footer>
+
+    <!-- Team Popup -->
+    <div class="team-popup-overlay" id="team-popup" onclick="if(event.target===this)this.classList.remove('show')">
+        <div class="team-popup-card">
+            <button class="team-popup-close" onclick="document.getElementById('team-popup').classList.remove('show')"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <h3>The <span class="gradient-text">Team</span></h3>
+            <ul class="team-list">
+                <li><i class="fa-solid fa-user"></i> Kevin George</li>
+                <li><i class="fa-solid fa-user"></i> Ashish Prince</li>
+                <li><i class="fa-solid fa-user"></i> Jithin George</li>
+                <li><i class="fa-solid fa-user"></i> Gokul P</li>
+            </ul>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="color-bends.js"></script>

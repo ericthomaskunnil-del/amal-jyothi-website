@@ -25,12 +25,14 @@ menuToggle.addEventListener('click', () => {
     if (navLinks.style.display === 'flex') {
         navLinks.style.flexDirection = 'column';
         navLinks.style.position = 'absolute';
-        navLinks.style.top = '80px';
+        navLinks.style.top = '70px';
         navLinks.style.left = '0';
         navLinks.style.width = '100%';
-        navLinks.style.background = 'rgba(10, 25, 47, 0.95)';
+        navLinks.style.background = 'white';
         navLinks.style.padding = '2rem';
         navLinks.style.alignItems = 'center';
+        navLinks.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+        navLinks.style.borderBottom = '1px solid rgba(0,0,0,0.05)';
     }
 });
 
@@ -64,11 +66,13 @@ window.addEventListener('scroll', revealOnScroll);
 const nav = document.querySelector('.glass-nav');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
-        nav.style.padding = '1rem 5%';
-        nav.style.background = 'rgba(10, 25, 47, 0.9)';
+        nav.style.padding = '0.8rem 5%';
+        nav.style.background = 'rgba(255, 255, 255, 0.98)';
+        nav.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
     } else {
-        nav.style.padding = '1.5rem 5%';
-        nav.style.background = 'rgba(10, 25, 47, 0.7)';
+        nav.style.padding = '1rem 5%';
+        nav.style.background = 'rgba(255, 255, 255, 0.95)';
+        nav.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
     }
 });
 

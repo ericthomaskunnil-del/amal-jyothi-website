@@ -65,12 +65,14 @@ window.addEventListener('scroll', revealOnScroll);
 // Header Scroll Effect
 const nav = document.querySelector('.glass-nav');
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        nav.style.padding = '0.8rem 5%';
+    if (window.scrollY > 50) {
+        nav.style.padding = '0.5rem 5%';
+        nav.style.height = '60px'; // Compact on scroll
         nav.style.background = 'rgba(255, 255, 255, 0.98)';
         nav.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
     } else {
-        nav.style.padding = '1rem 5%';
+        nav.style.padding = '0.8rem 5%';
+        nav.style.height = '70px'; // Default compact size
         nav.style.background = 'rgba(255, 255, 255, 0.95)';
         nav.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
     }

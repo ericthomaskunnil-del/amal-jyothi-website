@@ -78,6 +78,26 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Scroll Reveal Animation
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // Only animate once
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.reveal, .fade-in, .bento-item, .stat-item, .feature, .course-card').forEach(el => {
+    el.classList.add('reveal'); // Ensure base class is added
+    observer.observe(el);
+});
+
 // Contact RSVP Form Submission
 const contactForm = document.getElementById('contact-rsvp-form');
 const formConfirmation = document.getElementById('form-confirmation');

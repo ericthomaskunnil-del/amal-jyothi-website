@@ -149,6 +149,70 @@ a {
     width: 100%;
 }
 
+/* Mega Menu */
+.nav-links li {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 600px;
+    background: white;
+    box-shadow: var(--shadow-xl);
+    border-radius: 12px;
+    padding: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.mega-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.mega-column h3 {
+    font-size: 0.95rem;
+    color: var(--primary-crimson);
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.mega-column a {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    padding: 0.4rem 0;
+    transition: color 0.2s;
+}
+
+.mega-column a:hover {
+    color: var(--primary-blue);
+    transform: translateX(3px);
+}
+
+.mega-column a::after {
+    display: none;
+    /* Remove underline from nav links */
+}
+
 .nav-actions {
     display: flex;
     align-items: center;
@@ -1042,7 +1106,7 @@ a {
 }
 
 .team-toggle {
-    color: var(--primary-teal);
+    color: var(--primary-blue);
     cursor: pointer;
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -1051,6 +1115,85 @@ a {
 
 .team-toggle:hover {
     color: #0ea5e9;
+}
+
+@media (max-width: 768px) {
+    .glass-nav {
+        padding: 0.8rem 5%;
+        height: 60px;
+    }
+
+    .nav-links {
+        display: none;
+        /* Hidden by default */
+        width: 100%;
+        background: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        max-height: 80vh;
+        /* Scrollable if too long */
+        overflow-y: auto;
+        gap: 1.5rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        display: block;
+        /* Stack items */
+    }
+
+    .mega-menu {
+        position: static;
+        /* Relative flow for mobile */
+        width: 100%;
+        transform: none;
+        box-shadow: none;
+        padding: 0 0 0 1rem;
+        /* Indent */
+        opacity: 1;
+        visibility: visible;
+        display: block;
+        /* Always show for simplicity on mobile, or toggle */
+        border-left: 2px solid var(--primary-blue);
+        margin-top: 1rem;
+        background: var(--bg-light);
+    }
+
+    .mega-content {
+        grid-template-columns: 1fr;
+        /* Stack columns */
+        gap: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        color: var(--primary-blue);
+    }
+
+    .courses-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .course-section ul {
+        grid-template-columns: 1fr;
+    }
+
+    .course-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .career-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* Team Popup */

@@ -64,6 +64,26 @@ window.addEventListener('scroll', revealOnScroll);
 
 // Header Scroll Effect
 const nav = document.querySelector('.glass-nav');
+
+// Lenis Smooth Scroll
+const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    direction: 'vertical',
+    gestureDirection: 'vertical',
+    smooth: true,
+    mouseMultiplier: 1,
+    smoothTouch: false,
+    touchMultiplier: 2,
+});
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         nav.style.padding = '0.5rem 5%';

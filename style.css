@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     /* Premium Academic Palette */
     --primary-blue: #00205B;
     /* Deep Royal Blue */
@@ -39,6 +39,12 @@ body {
     color: var(--text-main);
     overflow-x: hidden;
     line-height: 1.6;
+    background-image: radial-gradient(#00205B 0.5px, transparent 0.5px), radial-gradient(#00205B 0.5px, #ffffff 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    background-attachment: fixed;
+    font-size: 18px;
+    /* Increased base size */
 }
 
 /* Typography */
@@ -51,7 +57,9 @@ h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     color: var(--primary-blue);
-    line-height: 1.2;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    /* Tighter heading tracking */
 }
 
 a {
@@ -601,7 +609,7 @@ a {
 
 /* About Section */
 .about-section {
-    padding: 6rem 5%;
+    padding: 4rem 5%;
     position: relative;
     overflow: hidden;
     background: var(--bg-white);
@@ -734,7 +742,7 @@ a {
 
 /* Courses Section */
 .courses-section {
-    padding: 6rem 5%;
+    padding: 4rem 5%;
     background: var(--bg-light);
 }
 
@@ -850,7 +858,7 @@ a {
 
 /* Admission Section */
 .admission-section {
-    padding: 6rem 5%;
+    padding: 4rem 5%;
     background: var(--primary-blue);
     color: white;
     position: relative;
@@ -957,7 +965,7 @@ a {
 
 /* Contact Section */
 .contact-section {
-    padding: 6rem 5%;
+    padding: 4rem 5%;
     background: var(--bg-white);
 }
 
@@ -1301,7 +1309,7 @@ a {
 /* Admission Page Specific Styles */
 
 .section-padding {
-    padding: 6rem 5%;
+    padding: 4rem 5%;
 }
 
 .full-width-card {
@@ -1505,56 +1513,53 @@ a {
     pointer-events: none;
 }
 
-/* Ensure mouse events can reach the canvas if we want interaction */
-/* But since it's background, maybe we want it to just receive global mouse events */
-/* The JS implementation attaches to document/window so pointer-events: none is fine *// *   S c r o l l   A n i m a t i o n s   * /  
- . r e v e a l   {  
-         o p a c i t y :   0 ;  
-         t r a n s f o r m :   t r a n s l a t e Y ( 3 0 p x ) ;  
-         t r a n s i t i o n :   a l l   0 . 8 s   e a s e - o u t ;  
- }  
-  
- . r e v e a l . a c t i v e   {  
-         o p a c i t y :   1 ;  
-         t r a n s f o r m :   t r a n s l a t e Y ( 0 ) ;  
- }  
-  
- . r e v e a l - d e l a y - 1   {  
-         t r a n s i t i o n - d e l a y :   0 . 1 s ;  
- }  
-  
- . r e v e a l - d e l a y - 2   {  
-         t r a n s i t i o n - d e l a y :   0 . 2 s ;  
- }  
-  
- . r e v e a l - d e l a y - 3   {  
-         t r a n s i t i o n - d e l a y :   0 . 3 s ;  
- }  
-  
- . f a d e - i n   {  
-         o p a c i t y :   0 ;  
-         t r a n s i t i o n :   o p a c i t y   1 s   e a s e - o u t ;  
- }  
-  
- . f a d e - i n . a c t i v e   {  
-         o p a c i t y :   1 ;  
- }  
-  
- @ k e y f r a m e s   f l o a t   {  
-         0 %   {  
-                 t r a n s f o r m :   t r a n s l a t e Y ( 0 p x ) ;  
-         }  
-  
-         5 0 %   {  
-                 t r a n s f o r m :   t r a n s l a t e Y ( - 1 0 p x ) ;  
-         }  
-  
-         1 0 0 %   {  
-                 t r a n s f o r m :   t r a n s l a t e Y ( 0 p x ) ;  
-         }  
- }  
-  
- . f l o a t - a n i m   {  
-         a n i m a t i o n :   f l o a t   4 s   e a s e - i n - o u t   i n f i n i t e ;  
- }  
- 
+/* Scroll Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.3s;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.float-anim {
+    animation: float 4s ease-in-out infinite;
+}
